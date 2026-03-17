@@ -91,7 +91,7 @@ const Requests = () => {
                 return;
             }
 
-            const response = await fetch(`http://127.0.0.1:8000/api/blood-requests/?filter=${filter}`, {
+            const response = await fetch(`https://hackathon-backend-j562.onrender.com/api/blood-requests/?filter=${filter}`, {
                 headers: { 
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'
@@ -121,7 +121,7 @@ const Requests = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://127.0.0.1:8000/api/create-request/', {
+            const response = await fetch('https://hackathon-backend-j562.onrender.com/api/create-request/', {
                 method: 'POST',
                 headers: { 
                     'Authorization': `Bearer ${token}`,

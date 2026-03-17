@@ -23,8 +23,8 @@ const LoginPage = () => {
 
         // 2. Define Endpoints
         const url = activeTab === 'signin' 
-            ? 'http://127.0.0.1:8000/api/login/' 
-            : 'http://127.0.0.1:8000/api/register/';
+            ? 'https://hackathon-backend-j562.onrender.com/api/login/' 
+            : 'https://hackathon-backend-j562.onrender.com/api/register/';
 
         const bodyData = activeTab === 'signin' 
             ? { username: email, password: password }

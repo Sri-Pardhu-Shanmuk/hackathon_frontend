@@ -36,7 +36,7 @@ const WantToDonate = () => {
         const fetchInitialData = async () => {
             const token = localStorage.getItem('token');
             try {
-                const response = await fetch('http://127.0.0.1:8000/api/donation-insights/', {
+                const response = await fetch('https://hackathon-backend-j562.onrender.com/api/donation-insights/', {
                     headers: { 
                         'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ const WantToDonate = () => {
         if (!selectedTime) return alert("Please select a time slot.");
         setLoading(true);
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/book-appointment/', {
+            const response = await fetch('https://hackathon-backend-j562.onrender.com/api/book-appointment/', {
                 method: 'POST',
                 headers: { 
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,

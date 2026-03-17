@@ -53,7 +53,7 @@ const AvailableBlood = () => {
         
         // encodeURIComponent handles characters like '+' in 'B+'
         const queryParams = `group=${encodeURIComponent(bloodGroup)}&component=${encodeURIComponent(component)}`;
-        const url = `http://127.0.0.1:8000/api/search-blood/?${queryParams}`;
+        const url = `https://hackathon-backend-j562.onrender.com/api/search-blood/?${queryParams}`;
 
         try {
             const response = await fetch(url, {

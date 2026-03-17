@@ -20,7 +20,7 @@ const DashboardHome = () => {
     useEffect(() => {
         const token = localStorage.getItem('token');
 
-        fetch('http://127.0.0.1:8000/api/dashboard-stats/', {
+        fetch('https://hackathon-backend-j562.onrender.com/api/dashboard-stats/', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,

@@ -26,7 +26,7 @@ const Dashboard = () => {
         return;
     }
 
-    fetch('http://127.0.0.1:8000/api/user/', {
+    fetch('https://hackathon-backend-j562.onrender.com/api/user/', {
         method: 'GET',
         headers: {
             // CRITICAL: Must be "Bearer [token]"
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
     // Handle Logout
     const handleLogout = async () => {
-        await fetch('http://127.0.0.1:8000/api/logout/', { method: 'POST' });
+        await fetch('https://hackathon-backend-j562.onrender.com/api/logout/', { method: 'POST' });
         navigate('/login');
     };
 

@@ -12,7 +12,7 @@ const EmergencyHospitals = () => {
         setLoading(true);
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/emergency-nodes/?q=${searchQuery}`, {
+            const response = await fetch(`https://hackathon-backend-j562.onrender.com/api/emergency-nodes/?q=${searchQuery}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const data = await response.json();
@@ -32,7 +32,7 @@ const EmergencyHospitals = () => {
         if (!window.confirm("Broadcast SOS to all nearby verified donors?")) return;
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/broadcast-sos/', {
+            const response = await fetch('https://hackathon-backend-j562.onrender.com/api/broadcast-sos/', {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${token}` }
             });

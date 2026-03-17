@@ -51,7 +51,7 @@ const Donors = () => {
     // 2. Fetch from Django on load
     useEffect(() => {
         const token = localStorage.getItem('token');
-        fetch('http://127.0.0.1:8000/api/donors/', {
+        fetch('https://hackathon-backend-j562.onrender.com/api/donors/', {
             headers: { 'Authorization': `Bearer ${token}` }
         })
         .then(res => res.json())
